@@ -3,7 +3,7 @@
 $sSectionName = "testadminpanel";
 $arDirProperties = Array(
    "description" => "О компании",
-   "keywords" => "КЛЮЧЕВЫЕ СЛОВА",
+   "keywords" => "Лучшая компания в жизни",
    "TITLE" => "О нас"
 );
 
