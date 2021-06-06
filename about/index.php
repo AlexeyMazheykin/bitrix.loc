@@ -3,7 +3,7 @@
 <?php
 
 //$APPLICATION->SetTitle("О нас");
-$APPLICATION->SetPageProperty('TITLE', "О нас")
+$APPLICATION->SetPageProperty('TITLE', "О нас"); /** пояснение в section.php*/
 
 ?>
 

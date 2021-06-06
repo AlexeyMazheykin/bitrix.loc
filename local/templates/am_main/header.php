@@ -210,7 +210,7 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
         <div class="row z-index">
             <div class="col-md-7 col-sm-6">
                 <div class="breadcrumb-title">
-                    <h2 class="white-text"><?php $APPLICATION->ShowTitle(false) ?></h2>
+                    <h2 class="white-text"><?php $APPLICATION->ShowTitle() ?></h2>
                 </div>
             </div>
             <div class="col-md-5 col-sm-6">
