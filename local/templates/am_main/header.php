@@ -12,11 +12,8 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/et-line.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/pe-icon-7-stroke.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/shortcode/shortcodes.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/meanmenu.min.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/font-awesome.min.css');
-
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/responsive.css');
-
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/modernizr-2.8.3.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery-1.12.0.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
@@ -213,7 +210,7 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
         <div class="row z-index">
             <div class="col-md-7 col-sm-6">
                 <div class="breadcrumb-title">
-                    <h2 class="white-text">О студии</h2>
+                    <h2 class="white-text"><?php $APPLICATION->ShowTitle(false) ?></h2>
                 </div>
             </div>
             <div class="col-md-5 col-sm-6">
