@@ -38,7 +38,7 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
 <head>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title><? $APPLICATION->ShowTitle(false); ?></title>
+    <title><? $APPLICATION->ShowTitle(); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" type="image/x-icon" href="<?= SITE_TEMPLATE_PATH ?>/assets/img/favicon.png">

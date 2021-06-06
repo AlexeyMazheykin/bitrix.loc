@@ -1,6 +1,6 @@
 
 <?
-$sSectionName = "testadminpanel";
+$sSectionName = "about";
 $arDirProperties = Array(
    "description" => "О компании",
    "keywords" => "Лучшая компания в жизни",
