@@ -38,7 +38,7 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
 <head>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title><? $APPLICATION->ShowTitle(); ?></title>
+    <title><? $APPLICATION->ShowTitle(false); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" type="image/x-icon" href="<?= SITE_TEMPLATE_PATH ?>/assets/img/favicon.png">
@@ -100,39 +100,28 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
 
                     <!-- Меню (основное) -->
                     <div class="col-md-10 col-sm-9 col-xs-4 text-right dark-menu">
-                        <div class="header-main-menu hidden-xs">
-                            <nav id="primary-menu">
-                                <ul class="main-menu text-right">
-                                    <li>
-                                        <a href="index.html">Главная</a>
-                                    </li>
-                                    <li>
-                                        <a href="about_us.html">О нас</a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html"> Услуги
-                                            <span class="indicator"><i class="fa fa-angle-down"></i></span></a>
-                                        <ul class="dropdown">
-                                            <li>
-                                                <a href="services_landing.html">Лендинг</a>
-                                            </li>
-                                            <li>
-                                                <a href="services_online_shop.html">Интернет-магазин</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="portfolio.html"> Портфолио</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog.html">Блог</a>
-                                    </li>
-                                    <li>
-                                        <a href="contacts.html">Контакты</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+
+                        <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"am_top_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "N",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "am_top_menu"
+	),
+	false
+);?>
+
+
 
                         <!-- Поиск -->
                         <div class="header-right">
