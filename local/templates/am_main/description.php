@@ -1,6 +1,6 @@
 <?php
 $arTemplate = [
     'NAME'=> 'Мой главный шаблон',
-    'DESCRIPTION' => '',
-    'SORT' => ''
+    'DESCRIPTION' => 'Главный шаблон',
+    'SORT' => '100'
 ];
