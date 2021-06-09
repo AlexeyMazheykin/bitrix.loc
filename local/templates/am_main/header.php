@@ -1,36 +1,35 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+<? if (!defined ( "B_PROLOG_INCLUDED" ) || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Page\Asset;
 
 
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/bootstrap.min.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/owl.carousel.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/animate-text.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/magnific-popup.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/et-line.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/pe-icon-7-stroke.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/shortcode/shortcodes.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/meanmenu.min.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/style.css' );
+Asset::getInstance ()->addCss ( SITE_TEMPLATE_PATH . '/css/responsive.css' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/vendor/modernizr-2.8.3.min.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/vendor/jquery-1.12.0.min.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/bootstrap.min.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/owl.carousel.min.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/jquery.counterup.min.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/waypoints.min.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/jquery.magnific-popup.min.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/jquery.mixitup.min.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/jquery.meanmenu.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/jquery.nav.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/jquery.parallax-1.1.3.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/animate-text.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/plugins.js' );
+Asset::getInstance ()->addJs ( SITE_TEMPLATE_PATH . '/js/main.js' );
 
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/animate-text.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/magnific-popup.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/et-line.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/pe-icon-7-stroke.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/shortcode/shortcodes.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/meanmenu.min.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/responsive.css');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/modernizr-2.8.3.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vendor/jquery-1.12.0.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/owl.carousel.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.counterup.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/waypoints.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.magnific-popup.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.mixitup.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.meanmenu.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.nav.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery.parallax-1.1.3.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/animate-text.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/plugins.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
 
-
-Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">');
+Asset::getInstance ()->addString ( '<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">' );
 ?>
 
 <!DOCTYPE html>
@@ -38,16 +37,16 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
 <head>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title><? $APPLICATION->ShowTitle(); ?></title>
+    <title><? $APPLICATION->ShowTitle (); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" type="image/x-icon" href="<?= SITE_TEMPLATE_PATH ?>/assets/img/favicon.png">
-    <? $APPLICATION->ShowHead(); ?>
+    <? $APPLICATION->ShowHead (); ?>
 </head>
 <body>
 
 <div id="panel">
-    <? $APPLICATION->ShowPanel(); ?>
+    <? $APPLICATION->ShowPanel (); ?>
 </div>
 
 <!--[if lt IE 8]>
@@ -101,26 +100,24 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
                     <!-- Меню (основное) -->
                     <div class="col-md-10 col-sm-9 col-xs-4 text-right dark-menu">
 
-                        <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"am_top_menu", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "2",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "N",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => "am_top_menu"
-	),
-	false
-);?>
-
+                        <? $APPLICATION->IncludeComponent (
+                            "bitrix:menu",
+                            "am_top_menu",
+                            array(
+                                "ALLOW_MULTI_SELECT" => "N",
+                                "CHILD_MENU_TYPE" => "",
+                                "DELAY" => "N",
+                                "MAX_LEVEL" => "2",
+                                "MENU_CACHE_GET_VARS" => array(),
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_TYPE" => "N",
+                                "MENU_CACHE_USE_GROUPS" => "N",
+                                "ROOT_MENU_TYPE" => "top",
+                                "USE_EXT" => "N",
+                                "COMPONENT_TEMPLATE" => "am_top_menu"
+                            ),
+                            false
+                        ); ?>
 
 
                         <!-- Поиск -->
@@ -176,7 +173,7 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
                                         </li>
                                     </ul>
                                 </li>
-                                <li>                                    <a href="portfolio.html">Портфолио</a>                                </li>
+                                <li><a href="portfolio.html">Портфолио</a></li>
 
                                 <li>
                                     <a href="blog.html">Блог</a>
@@ -199,7 +196,7 @@ Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?fa
         <div class="row z-index">
             <div class="col-md-7 col-sm-6">
                 <div class="breadcrumb-title">
-                    <h2 class="white-text"><?php $APPLICATION->ShowTitle() ?></h2>
+                    <h2 class="white-text"><?php $APPLICATION->ShowTitle () ?></h2>
                 </div>
             </div>
             <div class="col-md-5 col-sm-6">
