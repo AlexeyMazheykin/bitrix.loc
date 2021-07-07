@@ -1,0 +1,164 @@
+.gdparent {
+    margin: 20px 0 0 0;
+}
+
+.gratitudes__wrap {
+    width: 100%;
+    margin: 26px 0 10px 0;
+}
+
+.gratitudes {
+    min-width: 600px;
+}
+
+.gratitudes__radio {
+    display: flex;
+}
+
+.gratitudes__input-wrap {
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.gratitudes__input {
+    width: 40px;
+    height: 40px;
+    margin: 0 0;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+}
+
+.gratitudes__item {
+    position: relative;
+    margin: 5px 0 5px 0;
+    padding: 5px 10px;
+}
+
+.gratitudes__item:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.gratitudes__item-title {
+    display: flex;
+    align-items: center;
+}
+
+.gratitudes__item-img {
+    margin-right: 20px;
+}
+
+.gratitudes__item-date {
+    color: #606060;
+    margin: 0 0 0 auto;
+}
+
+button.gratitudes__item-btn,
+button.gratitudes__del-item-btn{
+    border: none;
+    margin: 0 0 0 10px;
+    padding: 0 0;
+    max-width: 100px;
+}
+
+button.gratitudes__item-btn b,
+button.gratitudes__del-item-btn b{
+    margin: 0;
+}
+
+.gratitudes__item-body {
+    text-indent: 20px;
+    padding: 5px 0 0 0;
+}
+
+.gratitudes__radio-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.gratitudes__input:checked ~ .gratitudes__radio-img {
+    opacity: 1;
+}
+
+.gratitudes__input:focus ~ .gratitudes__radio-img {
+    opacity: 1;
+}
+
+.gratitudes__update-form {
+    /*display: none;*/
+    margin: 0 0 5px 0;
+}
+
+.gratitudes__form-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button.gratitudes__input-button {
+    border: none;
+    margin: 0 0;
+    padding: 0 0;
+    min-width: 125px;
+}
+
+button .sidebar-button-content-inner {
+    padding: 5px 10px 5px 0;
+}
+
+.gratitudes__button-text {
+    padding: 2px 0 0 0;
+}
+
+.gratitudes__form-bottom .sidebar-button-content-inner b {
+    margin: 0 0;
+}
+
+.gratitudes__form-textarea {
+    color: #555;
+    border: 1px solid #91cef4 !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 17px;
+    position: relative;
+    height: 70px;
+    width: 97%;
+    resize: vertical;
+}
+
+.gratitudes__form-textarea_update {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.display-none {
+    display: none;
+}
+
+.gratitudes__show-all-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0 0;
+}
+
+b.gratitudes__show-all-text {
+    margin: 0 0 0 0;
+    text-align: center;
+}
